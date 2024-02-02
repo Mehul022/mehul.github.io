@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Blog</title>
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: beige;
+}
+.blog{
+    text-align: center;
+    font-size: 50px;
+    color: rgb(65, 156, 156);
+}
+h3{
+    font-size: 40px;
+}
+.date{
+    font-size: 30px;
+}
+.comment,.comment2{
+    font-size: 35px;
+}
+h1{
+    font-size: 40px;
+}
+#comments-container {
+    max-width: 600px;
+    margin: 20px;
+    padding: 20px;
+    border: 5px solid #ddd;
+    border-radius: 5px;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    padding: 20px;
+    border: 0;
+    margin: 0;
+}
+.info{
+    margin-left: 10px;
+    position: relative;
+    border: 10px groove black;
+    margin: 2px;
+    font-size: 40px;
+}
+button{
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: grey;
+    color: white;
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    /* margin:100px; */
+    padding: 10px;
+    /* position: fixed; */
+    font-size: 25px;
+    width: 100%;
+    bottom: 0;
+}
+.input_section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#like-section ,#like-section2{
+    text-align: center;
+
+}
+#like-button ,#like-button2{
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 50px;
+    margin-top: 100%;
+}
+#like-count,#like-count2 {
+    font-size: 50px;
+    margin-left: 10px;
+}
+@media all and (max-width:480px) and (max-height:950px)
+{
+.blog{
+    text-align: center;
+    font-size: 20px;
+    color: rgb(65, 156, 156);
+}
+header {
+    background-color: #333;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    border: 0;
+    margin: 0;
+}
+#comments-container {
+    max-width: 150px;
+    margin: 10px;
+    padding: 10px;
+    border: 5px solid #ddd;
+    border-radius: 5px;
+}
+.info{
+    margin-left: 5px;
+    position: relative;
+    border: 5px groove black;
+    margin: 2px;
+    font-size: 12px;
+}
+h4{
+    font-size: 15px;
+}
+h3{
+    font-size: 15px;
+}
+.date{
+    font-size: 15px;
+}
+.comment,.comment2{
+    font-size: 15px;
+}
+button{
+    font-size: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: grey;
+    color: white;
+}
+h1{
+    font-size: 20px;
+}
+p{
+    font-size:20px
+}
+#like-button ,#like-button2{
+    padding: 5px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 100%;
+}
+#like-count,#like-count2 {
+    font-size: 20px;
+    margin-left: 5px;
+}
+}
+</style>
+<body>
+    <header>
+        <h1>Mehul Agarwal</h1>
+        <p>Web Developer</p>
+    </header>
+    <section id="blog">
+        <h2 class="blog">Blog</h2>
+
+        <div class="blog-post-1">
+            <h3>Navigating the Future: Remote Work Trends in 2024</h3>
+            <p class="date">Date: February 1, 2024</p>
+                <div class="info">
+                <h4>The Evolution of Remote Work:</h4>
+                As technology advances and global circumstances change, remote work has become a mainstream practice for many organizations. Discuss the historical context and how remote work has evolved over the years.
+                <h4> The Rise of Hybrid Work Models:</h4>
+                Explore the growing popularity of hybrid work models, where employees split their time between working remotely and in a physical office. Discuss the benefits and challenges associated with this approach.
+                <h4>Technological Innovations Shaping Remote Work:</h4>
+                Examine the latest technologies influencing remote work, from virtual collaboration tools to augmented reality workspaces. Discuss how these innovations enhance productivity and connectivity.
+                <h4> Challenges and Solutions:</h4>
+                Address the common challenges associated with remote work, such as communication barriers and feelings of isolation. Provide practical solutions and tips for overcoming these obstacles.
+                </div>
+        </div>
+        <div class="input_section">
+        <div id="comments-container">
+            <h1>Comments</h1>
+            <ul id="comments-list"></ul>
+            <form id="comment-form">
+                <label for="comment" class="comment">Leave a Comment:</label>
+                <textarea id="comment" name="comment" rows="4" required></textarea><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div id="like-section">
+            <button id="like-button">Like</button>
+            <span id="like-count"></span>
+        </div>
+    </div>
+    </section>
+    <section>
+        <div class="blog-post-2">
+            <h3> Unveiling the Latest Cricket Trends of 2024</h3>
+            <p class="date">Date: February 2, 2024</p>
+                <div class="info">
+                    Cricket, often referred to as the "gentleman's game," continues to evolve with the passage of time. As we step into 2024, the world of cricket is buzzing with exciting trends that promise to reshape the way we experience and enjoy this beloved sport. Let's delve into the latest cricket trends that are making waves across the cricketing landscape.
+                    <h4>The Rise of T20 Leagues: A Global Phenomenon</h4>
+                    The influence of T20 cricket continues to grow, with various leagues around the world gaining immense popularity. From the Indian Premier League (IPL) to Australia's Big Bash League (BBL) and recently SA20(South Africa T20 league), these leagues have become a breeding ground for young talent and a platform for seasoned players to showcase their skills in an exhilarating and fast-paced format.
+                    <h4>Technology Integration: From Hawk-Eye to Smart Stadiums</h4>
+                    Cricket has fully embraced technology to enhance the viewing experience and provide players with valuable insights. Hawk-Eye technology, virtual reality training sessions, and smart stadiums equipped with cutting-edge analytics are becoming integral parts of the game. These advancements not only refine decision-making but also offer fans a more immersive cricketing experience.The digital age has transformed how cricket fans engage with the sport. Social media platforms, live streaming, and interactive apps bring fans closer to the action. Hashtags, challenges, and online communities create a vibrant cricketing ecosystem where fans from different corners of the world unite to support their favorite teams and players.
+                    <h4> The Emergence of Women's Cricket</h4>
+                    Women's cricket has witnessed a surge in popularity and recognition. With tournaments like the Women's T20 World Cup gaining global attention, the skill, and competitive spirit displayed by female cricketers are rightfully taking center stage. The growth of women's cricket is a testament to the sport's inclusivity and the talent present across genders.
+                    <h4>Fitness Revolution: Athletes in Prime Condition</h4>
+                    In the modern era, cricketers are not just skilled with the bat and ball; they are elite athletes committed to maintaining peak physical fitness. Specialized training programs, nutrition plans, and dedicated fitness routines are becoming standard for cricketers, ensuring they perform at their best throughout the grueling cricket calendar.
+                    <h4>A Thrilling Future Awaits</h4>
+                    As we navigate through the cricketing landscape of 2024, one thing is certain – the sport is alive with energy, innovation, and a commitment to excellence. Whether you're a seasoned cricket enthusiast or a newcomer to the game, these trends promise a thrilling and unforgettable future for cricket.
+                </div>
+                <div class="input_section">
+                    <div id="comments-container">
+                        <h1>Comments</h1>
+                        <ul id="comments-list2"></ul>
+                        <form id="comment-form2">
+                            <label for="comment2" class="comment">Leave a Comment:</label>
+                            <textarea id="comment2" name="comment2" rows="4" required></textarea><br>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                    <div id="like-section2">
+                        <button id="like-button2">Like</button>
+                        <span id="like-count2"></span>
+                    </div>
+                </div>
+    </section>
+    <footer>
+        <p> 2024 Mehul Agarwal</p>
+    </footer>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const commentForm = document.getElementById("comment-form");
+        const commentsList = document.getElementById("comments-list");
+        loadComments();
+        commentForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            const commentText = document.getElementById("comment").value;
+            if (commentText.trim() !== "") {
+                addComment(commentText);
+                commentForm.reset();
+                saveComments();
+            }
+        });
+        function addComment(text) {
+            const commentItem = document.createElement("li");
+            commentItem.className = "comment";
+            commentItem.textContent = text;
+            commentsList.appendChild(commentItem);
+        }
+        function saveComments() {
+            const comments = Array.from(commentsList.children).map(comment => comment.textContent);
+            localStorage.setItem("comments", JSON.stringify(comments));
+        }
+        function loadComments() {
+            const storedComments = localStorage.getItem("comments");
+            if (storedComments) {
+                const comments = JSON.parse(storedComments);
+                comments.forEach(commentText => {
+                    addComment(commentText);
+                });
+            }
+        }
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+    const likeButton = document.getElementById("like-button");
+    const likeCount = document.getElementById("like-count");
+
+    let currentLikes = parseInt(localStorage.getItem("likes")) || 0;
+    likeCount.textContent = currentLikes;
+    likeButton.addEventListener("click", function () {
+        currentLikes++;
+        likeCount.textContent = currentLikes;
+        localStorage.setItem("likes", currentLikes);
+    });
+});
+document.addEventListener("DOMContentLoaded", function () {
+        const commentForm = document.getElementById("comment-form2");
+        const commentsList = document.getElementById("comments-list2");
+        loadComments();
+        commentForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            const commentText = document.getElementById("comment2").value;
+            if (commentText.trim() !== "") {
+                addComment(commentText);
+                commentForm.reset();
+                saveComments();
+            }
+        });
+        function addComment(text) {
+            const commentItem = document.createElement("li");
+            commentItem.className = "comment2";
+            commentItem.textContent = text;
+            commentsList.appendChild(commentItem);
+        }
+        function saveComments() {
+            const comments = Array.from(commentsList.children).map(comment => comment.textContent);
+            localStorage.setItem("comments2", JSON.stringify(comments));
+        }
+        function loadComments() {
+            const storedComments = localStorage.getItem("comments2");
+            if (storedComments) {
+                const comments = JSON.parse(storedComments);
+                comments.forEach(commentText => {
+                    addComment(commentText);
+                });
+            }
+        }
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+    const likeButton = document.getElementById("like-button2");
+    const likeCount = document.getElementById("like-count2");
+
+    let currentLikes = parseInt(localStorage.getItem("likes2")) || 0;
+    likeCount.textContent = currentLikes;
+    likeButton.addEventListener("click", function () {
+        currentLikes++;
+        likeCount.textContent = currentLikes;
+        localStorage.setItem("likes2", currentLikes);
+    });
+});
+</script>
+</body>
+</html>

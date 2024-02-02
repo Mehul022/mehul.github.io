@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+</head>
+<style>
+    html{
+        scroll-behavior: smooth;
+    }
+     @keyframes naviga {
+            0%{
+                background-color: black;
+                color: whitesmoke;
+                /* width: 10px; */
+            }
+            100%{
+                background-color: #FFEFD5;
+                color: black;
+                /* width: 100px; */
+            }
+        }
+        .eduschool,.educollege{
+            font-size: 40px;
+        }
+        footer img{
+            height: 80px;
+        }
+        .intro {
+            font-size: 83px;
+            text-shadow: 3px 4px 4px rgb(131, 231, 44);
+            /* color: rgb(6, 6, 124); */
+        }
+        .int {
+            font-size: 32px;
+        }
+        .About,.eduhead,.skillhead,.Achievehead{
+            font-size: 48px;
+            margin-top: 50px;
+            text-align: center;
+        }
+        .motiva {
+            font-style: italic;
+            color: brown;
+            text-shadow: 3px 4px 4px black;
+            font-size: 45px;
+        }
+
+        .author {
+            text-align: right;
+            font-size: 33px;
+            font-style: oblique;
+        }
+        a{
+            text-decoration: none;
+            font-size: 40px;
+            color: white;
+        }
+        .toggleanc{
+            color: brown;
+        }
+        a 
+        button:hover{
+            cursor: pointer;
+            color: hotpink;
+        }
+        a:hover{
+            color: green;
+        }
+        p {
+            font-size:50px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        .but{
+            font-size: 40px;
+            border-radius:20px ;
+            padding: 10px;
+            background-color: brown;
+            color: white;
+        }
+        footer{
+            background-color: grey;
+            border-radius: 5px;
+            padding: 15px;
+            margin-top: 20px;
+            font-size: 60px;
+            display: flex;
+            justify-content:space-between;
+            color: white;
+        }
+        img{
+            margin: 20px;
+        }
+        #butHome,#butEdu,#butAchiev,#butSkills,#butBlog
+        {
+            background-color: grey;
+            color: white;
+            font-size: 40px;
+            padding: 5px;
+            border: 0px;
+        }
+
+    body {
+        background-color:#FFEFD5;
+        margin: 20px;
+        animation-name: naviga;
+        animation-duration: 8s;
+        animation-iteration-count: 1;
+    }
+    /* rgb(5, 19, 36) */
+    .darkmode{
+        background-color:rgb(5, 19, 36);
+        color:  #ffefd5;
+    }
+    @media all and (max-height:950px) and (max-width:1820px) and (min-width:480px) {
+        .bosy {
+            display: grid;
+            grid-template-columns: 15%;
+            gap: 30px;
+        }
+        .Navigation {
+            background-color: grey;
+            padding: 10px;
+            word-spacing: 50px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            /* position: fixed; */
+
+        }
+       
+        a{
+            text-align: center;
+        }
+        .main {
+            grid-column-start: 2;
+        }
+        .imgcircle {
+            margin-top: 350px;
+            clip-path: circle(40% at 50% 50%);
+            height: 500px;
+            animation-name: image;
+            animation-duration: 4s;
+            animation-iteration-count: 1;
+        }
+        @keyframes image {
+            from {
+                height :0px;
+            }
+            to{
+                height:500px;
+            }
+
+        }
+    } 
+    @media all and (min-width:1820px) and (max-height:1420px) {
+        .Navigation {
+            background-color: grey;
+            padding: 20px;
+            /* word-spacing: 100px; */
+            display:flex;
+            justify-content: space-around;
+            /* position: fixed; */
+        }
+        .section {
+            display: flex;
+        }
+
+        .imgcircle {
+            margin-top: 350px;
+            clip-path: circle(40% at 50% 50%);
+            height: 500px;
+            
+            animation-name: image;
+            animation-duration: 4s;
+            animation-iteration-count: 1;
+        }
+        @keyframes image {
+            from {
+                height :0px;
+            }
+            to{
+                height:500px;
+            }
+        }
+    }
+    @media all and (min-width:1820px) and (min-height:1420px) {
+        .Navigation {
+            background-color: grey;
+            padding: 20px;
+            display:flex;
+            justify-content: space-around;
+        }
+        #butHome,#butEdu,#butAchiev,#butSkills,#butBlog
+        {
+            background-color: grey;
+            color: white;
+            font-size: 40px;
+            padding: 5px;
+            border: 0px;
+        }
+        .section {
+            display: flex;
+            margin-top: 100px;
+            margin-left: 100px;
+        }
+        .Educationsection,.SkillsSection,.AchiveSection{
+            margin-left: 100px;
+        }
+        .imgcircle {
+            margin-top: 350px;
+            clip-path: circle(40% at 50% 50%);
+            height: 600px;
+            animation-name: image;
+            animation-duration: 4s;
+            animation-iteration-count: 1;
+        }
+        @keyframes image {
+            from {
+                height :0px;
+            }
+            to{
+                height:600px;
+            }
+
+        }
+        .side {
+            margin-top: 100px;
+        }
+    }
+    @media all and (max-width:480px) and (max-height:950px) {
+        .Navigation {
+            display:flex;
+            background-color: grey;
+            padding: 10px;
+            justify-content: space-around;
+            width: 90%;
+
+            /* position: fixed; */
+        }
+        footer img{
+            height: 40px;
+        }
+        .eduschool,.educollege{
+            font-size: 15px;
+        }
+        .toggleanc{
+            font-size:10px;
+        }
+        p {
+            font-size:15px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .intro {
+            font-size: 25px;
+            text-shadow: 3px 4px 4px rgb(131, 231, 44);
+            /* color: rgb(6, 6, 124); */
+        }
+        .About,.eduhead,.skillhead,.Achievehead{
+            font-size: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .motiva {
+            font-style: italic;
+            color: brown;
+            text-shadow: 1px 2px 2px black;
+            font-size: 11px;
+        }
+        .int {
+            font-size: 16px;
+        }
+        .img {
+            grid-row-start: 1;
+            margin-left: 27%;
+        }
+        .author {
+            text-align: right;
+            font-size: 10px;
+            font-style: oblique;
+        }
+        #butHome,#butEdu,#butAchiev,#butSkills,#butBlog
+        {
+            background-color: grey;
+            color: white;
+            font-size: 12px;
+            padding: 2px;
+            border: 0px;
+        }
+        a{
+            text-decoration: none;
+            font-size: 12px;
+            color: white;
+        }
+        .section {
+            display: grid;
+            grid-template-columns: 100%;
+        }
+        .but{
+            font-size: 10px;
+            border-radius:5px ;
+            padding: 8px;
+            background-color: brown;
+            color: white;
+        }
+        footer{
+            background-color: grey;
+            border-radius: 3px;
+            padding: 5px;
+            margin-top: 10px;
+            font-size: 20px;
+            display: flex;
+            justify-content:space-between;
+            color: white;
+        }
+        .imgcircle {
+
+        margin-top: 20px;
+        clip-path: circle(40% at 50% 50%);
+        height: 100px;
+        justify-content: space-around;
+        animation-name: image;
+        animation-duration: 4s;
+        animation-iteration-count: 1;
+        }
+        @keyframes image {
+            from {
+                height :0px;
+            }
+            to{
+                height:100px;
+            }
+
+        }
+                
+    }
+    @media all and (max-width:1820px) and (min-width:480px) {
+
+        .Navigation {
+            display:flex;
+            background-color: grey;
+            padding: 20px;
+            justify-content: space-around;
+            /* position: fixed; */
+        }
+        #butHome,#butEdu,#butAchiev,#butSkills,#butBlog
+        {
+            background-color: grey;
+            color: white;
+            font-size: 15px;
+            padding: 2px;
+            border: 0px;
+        }
+        a{
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            
+
+        }
+        .section {
+            display: grid;
+            grid-template-columns: 100%;
+        }
+
+        .imgcircle {
+
+            margin-top: 50px;
+            clip-path: circle(40% at 50% 50%);
+            height: 300px;
+            justify-content: space-around;
+            animation-name: image;
+            animation-duration: 4s;
+            animation-iteration-count: 1;
+        }
+        @keyframes image {
+            from {
+                height :0px;
+            }
+            to{
+                height:300px;
+            }
+
+        }
+        .img {
+            grid-row-start: 1;
+            margin-left: 30%;
+        }
+
+        .side {
+            margin-top: 10px;
+        }
+    }
+</style>
+
+<body class="bosy">
+    <nav class="Navigation">
+        <button onclick="Topfunction()" id="butHome">About Me</button>
+        <button onclick="Educationfunction()" id="butEdu">Education</button>
+        <button onclick="Achievefunction()" id="butAchiev">Achievement</button>
+        <button onclick="Skillsfunction()" id="butSkills">Skills</button>
+        <a href="./blog.html" class="Blogsfe" target="_blank">Blogs</a>
+    </nav>
+    <main class="main">
+
+        <section class="section">
+            <div class="side">
+                <h3 class="motiva">
+                    “It's through mistakes that you actually can grow. You have to get bad in order to get good”
+                </h3>
+                <h4 class="author">
+                    — Paula Scher
+                </h4>
+
+                <h2 class="intro">Hello there! <br>I'm Mehul Agarwal,</h2>
+                <h6 class="int">a passionate student with a love for Coding and cricket. Welcome to my little corner of
+                    the internet!
+                </h6>
+
+                <h3 class="About">About me:<br></h3>
+                <p class="p1">
+                    I'm currently pursuing my bachelor in Computer Science at International Institute of Information
+                    Technology where I dive deep into the fascinating world of Programming. Beyond the classroom, I'm
+                    always on the lookout for exciting projects and opportunities to expand my knowledge.
+                </p>
+                <p class="p2">
+                    This website is my creative hub, where I share insights into my academic journey, personal projects,
+                    and the things that spark my curiosity. Whether it's writing about the latest developments in
+                    Computer Science, I'm thrilled to have you along for the ride.
+                </p>
+                
+            </div>
+            <div class="img">
+                <img src="./Profileimage.jpeg" alt="Mehul Agarwal" class="imgcircle">
+            </div>
+        </section>
+        <section class="Educationsection" id="edu">
+            <h2 class="eduhead">
+                Education background :
+            </h2>
+            <h3 class="eduschool">
+                Schooldays Chronicles: A Journey Through Academic Adventures and Lifelong Lessons
+            </h3>
+            <p>
+                Nestled in the heart of Abu road, St John's School wasn't just a place for learning, it was a home away from home. The memories created within those walls are like treasures in a chest, each with its own story to tell.It was a place where dreams were nurtured, passions were ignited, and lifelong connections were made. The dedicated teachers, supportive staff, and the vibrant school community.While some subjects felt like a puzzle waiting to be solved, others were like opening a treasure chest of knowledge. <br>
+                As a member of the Class of 2022, I had the privilege of navigating the exciting twists and turns of high school life alongside some incredible individuals. To my fellow graduates, the journey may have ended, but the memories and friendships live on. School life wasn't just about textbooks and exams; it was a tapestry of unforgettable moments. Whether it was the drama club, sports team, or the science fair enthusiasts, these experiences shaped my interests and introduced me to lifelong friends.
+            </p>
+            <h3 class="educollege">
+                College Chronicles: Navigating the Labyrinth of Learning and Adventures
+            </h3>
+            <p>
+                I embarked on my academic journey at International Institute Of Information Technology Hyderabad, where I delved into the fascinating world of Programming. Picture this: early morning classes, late-night study sessions, and a whole lot of coffee to keep the creativity flowing. Among the sea of intriguing subjects like C-Programming,Digital System and Microcontroller and many more like this stole my heart. From Discrete Structure to Data Structure And Algorithms, each class fueled my passion for competitive Programming.<br>
+                Now, as I continue my journey, I'm eager to dive even deeper into World of Information Technology. Learning is a lifelong adventure, and I'm always on the lookout for opportunities to expand my knowledge and skills. But life at university wasn't all about textbooks and exams.The best part? Applying what I've learned in real-world scenarios opened my eyes to the practical side of Information Technology Industries, and I can't wait to explore more.
+            </p>
+        </section>
+        <section class="AchiveSection" id="ach">
+            <h3 class="Achievehead">
+                Achievement Unlocked: Dive into the Story Behind the Milestones
+            </h3>
+            <p>
+                Embark on a virtual tour through the milestones that shape my story. From conquering coding challenges to leading impactful projects, each achievement is a chapter in the adventure of growth and success.<br><br>
+            <b>Innovative Projects:</b> Picture this: transforming ideas into reality. Dive into the innovative projects where I orchestrated solutions, pushing the boundaries of what's possible.<br>
+            <b>Academic Excellence:</b> The pursuit of knowledge is a journey, not a destination. Explore the academic triumphs that reflect my dedication to excellence in every subject, from complex algorithms to cutting-edge technologies.<br>
+
+            <b>Hackathon Glory:</b> Join me in the thrill of hackathons, where sleepless nights turned into coding marvels. From ideation to execution, these events are the proving grounds of creativity and collaboration.<br>
+            <b>Interactive Challenge:</b>Ready for a challenge? I invite you to guess which achievement was the most challenging or drop a message if you've faced similar triumphs! Let's turn this gallery into a shared space of inspiration and celebration.<br>
+            </p>
+        </section>
+        <section class="SkillsSection" id="ski">
+            <h3 class="skillhead">
+                Unleashing My Skillset: A Kaleidoscope of Proficiencies
+            </h3>
+            <p>
+                Welcome to the skill zone where my capabilities come to life. Imagine a canvas painted with a vibrant mix of skills, each stroke telling a unique story. From Basic coding skills to Advanced industrial implementation, my toolkit is diverse and ready for any creative challenge.Transforming ideas into visually stunning realities is my forte.  Ever seen a digital masterpiece come to life through code? That's my domain. Proficient in C Language, I thrive in the world of algorithms and logic.<br>
+                Skills are not just checkboxes on a resume; they are the building blocks of innovation. Each skill in my arsenal contributes to a bigger picture — a vision of continuous growth, learning, and making a positive impact.Words have power, and I wield them strategically. From crafting compelling content to delivering impactful presentations, effective communication is at the core. Challenges are just opportunities in disguise. With a knack for analytical thinking, I embrace problem-solving as a thrilling adventure. Robust, versatile, and my go-to for building scalable applications. If software were a cup of coffee, Java would be the rich espresso at its core.
+                <br><br><br>
+                <div class="toggleanc">
+                <a class="toggleanc" href="./Adobe Scan Feb 01, 2024.pdf" target="_blank"> To view my  <b>Marksheet</b></a>
+            </div>
+            </p>
+
+        </section>
+        <button onclick="myFunction()" class="but" id="butcolor">Dark mode</button>
+        <footer>
+            Connect with Me :
+            <a href="https://github.com/Mehul022" target="_blank"><img src="./github.png" alt="Git Hub"  >
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+                <img src="./insta.png" alt="Instagram" >
+            </a>
+            <a href="mailto:someone@example.com" target="_blank">
+                <img src="./Screenshot from 2024-01-26 00-56-57.png" alt="E-Mail" >
+            </a>
+        </footer>
+    </main>
+    
+</body>
+<script>
+    var count=0;
+    var dark=document.getElementById("butcolor");
+    dark.addEventListener("click",function(){
+        count++;
+        if(count%2!=0)
+        {
+        document.getElementById('butcolor').innerHTML="Light Mode";
+        }
+        else
+        {
+            document.getElementById('butcolor').innerHTML="Dark Mode";
+        }
+    })
+    function myFunction() {
+        
+       var element = document.body;
+       element.classList.toggle("darkmode");
+    }
+    function Topfunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+function Educationfunction() {
+    var targetPosition = document.getElementById('edu').offsetTop;
+    window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+    });
+}
+function Achievefunction() {
+    var targetPosition = document.getElementById('ach').offsetTop;
+    window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+    });
+}
+function Skillsfunction() {
+    var targetPosition = document.getElementById('ski').offsetTop;
+    window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+    });
+}
+    </script>
+</html>
